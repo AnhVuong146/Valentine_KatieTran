@@ -240,6 +240,14 @@
         </div>
     </div>
 
+    <div class="valentine-prompt" id="secondPrompt" style="display: none;">
+        <h2>Are you being dead ass rn? You really don't wanna be my Valentine? 😠</h2>
+        <div class="valentine-buttons">
+            <button onclick="handleSecondYes()">Yes I want to be your Valentine ❤️</button>
+            <button onclick="handleSecondNo()">No I really Don't🖕🏻</button>
+        </div>
+    </div>
+
     <div class="kidnap-message" id="kidnapMessage">
         <h2>LMAO you really thought you have a choice? 😈 There's no way out girl and I'm kidnapping your ass🤣💕</h2>
         <div class="gif-container-laughing">
@@ -250,7 +258,7 @@
         </div>
     </div>
 
-        <a href="index.html" class="back-button" id="backButton">← Start Over</a>
+        <a href="Valentine.html" class="back-button" id="backButton">← Start Over</a>
     </div>
 </body>
 
@@ -261,6 +269,15 @@
 
     function handleNo() {
         document.getElementById('valentinePrompt').style.display = 'none';
+        document.getElementById('secondPrompt').style.display = 'block';
+    }
+
+    function handleSecondYes() {
+        window.location.href = 'yes.html';
+    }
+
+    function handleSecondNo() {
+        document.getElementById('secondPrompt').style.display = 'none';
         document.getElementById('backButton').style.display = 'none';
         document.getElementById('kidnapMessage').classList.add('show');
     }
